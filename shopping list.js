@@ -10,16 +10,17 @@ function logger(req, res, next) {
 }
 
 let products = [{
-        id: "123",
+        id: "1",
         auther: "david",
         content: "hey you"
     },
     {
-        id: "123456",
+        id: "2",
         auther: "diamant",
         content: "yes i am"
     }
 ];
+
 
 app.get('/', (req, res) => {
     res.send('hello');
@@ -38,7 +39,7 @@ app.get('/products/:id', (req, res) => {
 })
 
 app.post('/products', (req, res) => {
-    console.log(req.body);
+    req.body.id = toString(products.length + 1) ;
     products.push(req.body);
     res.send(req.body);
 });
@@ -54,15 +55,13 @@ app.put('/products/:id', (req, res) => {
 
 
 app.delete('/products/:id', (req, res) => {
-    products.forEach((post, index) => {
-        if (post.id === req.params.id) {
+    products.forEach((product, index) => {
+        if (product.id === req.params.id) {
             products.splice(index, 1)
             res.send(req.params.id + ' deleted');
         }
     });
 });
-
-
 
 
 
