@@ -38,8 +38,15 @@ app.get('/products/:id', (req, res) => {
     }
 })
 
+let idCounter = products.length + 1;
+
 app.post('/products', (req, res) => {
-    req.body.id = toString(products.length + 1) ;
+    products.forEach((product) => {
+      if(product.id === idCounter.toString()) {
+           idCounter += 1 
+        }
+        })
+    req.body.id = idCounter.toString() ;
     products.push(req.body);
     res.send(req.body);
 });
