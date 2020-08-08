@@ -11,13 +11,13 @@ function logger(req, res, next) {
 
 let products = [{
         id: "1",
-        auther: "david",
-        content: "hey you"
+        auther: "Eggs",
+        content: "19.90"
     },
     {
         id: "2",
-        auther: "diamant",
-        content: "yes i am"
+        auther: "milk",
+        content: "4.50"
     }
 ];
 
@@ -42,11 +42,11 @@ let idCounter = products.length + 1;
 
 app.post('/products', (req, res) => {
     products.forEach((product) => {
-      if(product.id === idCounter.toString()) {
-           idCounter += 1 
+        if (product.id === idCounter.toString()) {
+            idCounter += 1
         }
-        })
-    req.body.id = idCounter.toString() ;
+    })
+    req.body.id = idCounter.toString();
     products.push(req.body);
     res.send(req.body);
 });
