@@ -41,7 +41,7 @@ function addProductFromObj(productObj) {
     productTextSpan.classList.add('textSpan');
     //product price span
     productLi.appendChild(productPriceSpan);
-    productPriceSpan.textContent = productObj.price; + ' ₪';
+    productPriceSpan.textContent = productObj.price + ' ₪';
     productPriceSpan.classList.add('priceSpan');
     //delete button
     productLi.appendChild(deleteButton);
