@@ -12,19 +12,19 @@
 <body>
 
     <h1>My shopping list</h1>
+    <div id="mainDiv">
 
-    <div>
-        <label for="productInput">Enter a new item:</label>
-        <input type="text" name="product" id="productInput">
-        <label for="priceInput">Enter product price</label>
-        <input type="text" name="price" id="priceInput">
-        <button id="addProductBtn">Add item</button>
+        <div id="headerDiv">
+            <input type="text" name="product" id="productInput" placeholder="Enter product">
+            <input type="text" name="price" id="priceInput" placeholder="Enter price">
+            <button id="addProductBtn">Add product</button>
+        </div>
+
+        <ul id="productsList">
+
+        </ul>
     </div>
-
-    <ul id="productsList">
-
-    </ul>
-    <script src="./clientScript.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

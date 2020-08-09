@@ -1,9 +1,114 @@
- li {
-     margin-bottom: 10px;
+ body {
+     background-color: #ffb74d;
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
  }
  
- li button {
-     font-size: 8px;
-     margin-left: 20px;
-     color: #666;
+ h1 {
+     color: black;
+     font-size: 48px;
+     text-shadow: 0px 5px 11px rgba(0, 0, 0, 0.53);
+ }
+ 
+ #mainDiv {
+     display: flex;
+     flex-direction: column;
+     justify-content: stretch;
+     border: 3px solid #004a9f;
+     min-width: 400px;
+     width: 50vw;
+     max-width: 500px;
+     box-shadow: 0px 0px 30px -10px rgba(0, 0, 0, 0.75);
+ }
+ 
+ #headerDiv {
+     background-color: #004ba0;
+     display: flex;
+     justify-content: space-between;
+     height: 36px;
+ }
+ 
+ #productInput,
+ #priceInput {
+     background-color: rgba(0, 0, 0, 0);
+     color: white;
+     border: none;
+     outline: none;
+     font-size: 16px;
+     padding-left: 16px;
+     width: 150px
+ }
+ 
+ #productInput::placeholder,
+ #priceInput::placeholder {
+     color: white;
+     opacity: 0.8;
+ }
+ 
+ #productInput:focus::placeholder,
+ #priceInput:focus::placeholder {
+     color: white;
+     opacity: 0.4;
+ }
+ 
+ #addProductBtn {
+     background-color: rgba(0, 0, 0, 0);
+     color: white;
+     border: none;
+     width: 100px;
+     cursor: pointer;
+ }
+ 
+ #productsList {
+     background-color: #63a4ff;
+     list-style-type: none;
+     padding-left: 0;
+     margin-bottom: 0;
+     margin-top: 0;
+ }
+ 
+ .productLi {
+     display: flex;
+     justify-content: space-between;
+     height: 36px;
+ }
+ 
+ .productLi:hover {
+     transform: scale(1.02);
+     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.75);
+ }
+ 
+ .productLi:nth-child(even) {
+     background-color: #1875d1;
+ }
+ 
+ .textSpan,
+ .priceSpan {
+     flex-grow: 1;
+     font-size: 16px;
+     padding: 10px 16px;
+ }
+ 
+ .deleteBtn,
+ .editBtn {
+     background-color: rgba(0, 0, 0, 0);
+     color: white;
+     border: none;
+     width: 36px;
+     visibility: hidden;
+     cursor: pointer;
+     margin-right: 10px;
+ }
+ 
+ .productLi:hover .deleteBtn,
+ .productLi:hover .editBtn {
+     visibility: visible;
+ }
+ 
+ .deleteBtn:hover,
+ .editBtn:hover {
+     color: #ef5350;
  }
