@@ -11,13 +11,13 @@ function logger(req, res, next) {
 
 let products = [{
         id: "1",
-        auther: "Eggs",
-        content: "19.90"
+        productName: "Eggs",
+        price: "19.90"
     },
     {
         id: "2",
-        auther: "milk",
-        content: "4.50"
+        productName: "milk",
+        price: "4.50"
     }
 ];
 
